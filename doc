@@ -1,0 +1,21 @@
+ssh-keygen -t ed25519 -C boulba@gmail.com
+ssh-add /c/Users/Abi/.ssh/id_ed25519
+ssh -T git@github.com
+
+
+git remote add origin git@github.com:boulba/test2.git
+git remote remove origin
+
+
+git remote -v
+git remote show 
+
+git pull origin master --allow-unrelated-histories
+
+git tag v1
+git tag -list
+git push --tags
+git checkout v1
+
+git tag --delete v1
+git push --delete origin v1
